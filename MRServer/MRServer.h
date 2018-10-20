@@ -12,8 +12,9 @@ private:
 public:
 		
 
-	void initialize();
+	//void initialize();
 	void runServer(int port);
+	void processRequest( int socket );
 };
 
 #endif
