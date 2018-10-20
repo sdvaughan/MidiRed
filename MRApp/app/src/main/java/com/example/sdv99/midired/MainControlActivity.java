@@ -15,6 +15,8 @@ import android.widget.ListView;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
+import java.io.*;
+import java.net.Socket;
 import java.util.ArrayList;
 
 public class MainControlActivity extends AppCompatActivity {
@@ -23,6 +25,8 @@ public class MainControlActivity extends AppCompatActivity {
     MidiInputPort inputPort;
     private int activity_main_control;
     boolean deviceOpened = false;
+    DataOutputStream outputStream;
+    byte[] block = new byte[4];
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +45,22 @@ public class MainControlActivity extends AppCompatActivity {
         }
 
         AlertDialog chooseDevice = new AlertDialog.Builder(this).create();
+
+        Thread thread = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                Socket outSocket;
+                try {
+                    outSocket = new Socket("128.10.12.218", 7781);
+                    outputStream = new DataOutputStream(outSocket.getOutputStream());
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
+                }//end try catch
+            }
+        });
+
+        thread.start();
+
 
     /*    if (midiInfos.length > 0){
                 AlertDialog.Builder builder = new AlertDialog.Builder(this);
@@ -66,11 +86,11 @@ public class MainControlActivity extends AppCompatActivity {
      */
         if (midiInfos.length > 0) {
             midiMan.openDevice(midiInfos[0], new MidiManager.OnDeviceOpenedListener() {
-                @Override
-                public void onDeviceOpened(MidiDevice device) {
-                    inputPort = device.openInputPort(0);
-                }
-            }, new Handler(Looper.getMainLooper())
+                        @Override
+                        public void onDeviceOpened(MidiDevice device) {
+                            inputPort = device.openInputPort(0);
+                        }
+                    }, new Handler(Looper.getMainLooper())
             );
 
         }
@@ -89,17 +109,25 @@ public class MainControlActivity extends AppCompatActivity {
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                 firstAmtText.setText(Integer.toString(progress * 100 / 127) + "%");
 
-                byte[] buffer = new byte[32];
-                int numBytes = 0;
-                int channel = 1; // MIDI channels 1-16 are encoded as 0-15.
-                buffer[numBytes++] = (byte)(0xB0 + (channel - 1)); // note on
-                buffer[numBytes++] = (byte)(0x07); // pitch is middle C
-                buffer[numBytes++] = (byte)progress; // max velocity
-                int offset = 0;
-                try {
-                    inputPort.send(buffer, offset, numBytes);
-                } catch (Exception e) {
-                }
+
+                block[1] = 0x0; // MIDI channels 1-16 are encoded as 0-15.
+                block[0] = (byte)(0x90); // note on
+                block[2] = (byte)(0x07); // pitch is middle C
+                block[3] = (byte)progress; // max velocity
+                Thread thread = new Thread(new Runnable() {
+                    @Override
+                    public void run() {
+                        try {
+                            for (int i = 0; i < 4; i++) {
+                                outputStream.writeByte(block[i]);
+                            }
+                        } catch (IOException e){
+                            throw new RuntimeException("Couldn't send message");
+                        }
+                    }
+                });
+
+                thread.start();
             }
             @Override
             public void onStartTrackingTouch(SeekBar seekBar){}
@@ -114,17 +142,24 @@ public class MainControlActivity extends AppCompatActivity {
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                 secondAmtText.setText(Integer.toString(progress * 100 / 127) + "%");
 
-                byte[] buffer = new byte[32];
-                int numBytes = 0;
-                int channel = 2; // MIDI channels 1-16 are encoded as 0-15.
-                buffer[numBytes++] = (byte)(0xB0 + (channel - 1)); // note on
-                buffer[numBytes++] = (byte)(0x07); // pitch is middle C
-                buffer[numBytes++] = (byte)progress; // max velocity
-                int offset = 0;
-                try {
-                    inputPort.send(buffer, offset, numBytes);
-                } catch (Exception e) {
-                }
+                block[1] = 0x1; // MIDI channels 1-16 are encoded as 0-15.
+                block[0] = (byte)(0x90); // note on
+                block[2] = (byte)(0x07); // pitch is middle C
+                block[3] = (byte)progress; // max velocity
+                Thread thread = new Thread(new Runnable() {
+                    @Override
+                    public void run() {
+                        try {
+                            for (int i = 0; i < 4; i++) {
+                                outputStream.writeByte(block[i]);
+                            }
+                        } catch (IOException e){
+                            throw new RuntimeException("Couldn't send message");
+                        }
+                    }
+                });
+
+                thread.start();
             }
             @Override
             public void onStartTrackingTouch(SeekBar seekBar){}
@@ -139,17 +174,24 @@ public class MainControlActivity extends AppCompatActivity {
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                 thirdAmtText.setText(Integer.toString(progress * 100 / 127) + "%");
 
-                byte[] buffer = new byte[32];
-                int numBytes = 0;
-                int channel = 3; // MIDI channels 1-16 are encoded as 0-15.
-                buffer[numBytes++] = (byte)(0xB0 + (channel - 1)); // note on
-                buffer[numBytes++] = (byte)(0x07); // pitch is middle C
-                buffer[numBytes++] = (byte)progress; // max velocity
-                int offset = 0;
-                try {
-                    inputPort.send(buffer, offset, numBytes);
-                } catch (Exception e) {
-                }
+                block[1] = 0x2; // MIDI channels 1-16 are encoded as 0-15.
+                block[0] = (byte)(0x90); // note on
+                block[2] = (byte)(0x07); // pitch is middle C
+                block[3] = (byte)progress; // max velocity
+                Thread thread = new Thread(new Runnable() {
+                    @Override
+                    public void run() {
+                        try {
+                            for (int i = 0; i < 4; i++) {
+                                outputStream.writeByte(block[i]);
+                            }
+                        } catch (IOException e){
+                            throw new RuntimeException("Couldn't send message");
+                        }
+                    }
+                });
+
+                thread.start();
             }
             @Override
             public void onStartTrackingTouch(SeekBar seekBar){}
@@ -164,17 +206,24 @@ public class MainControlActivity extends AppCompatActivity {
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                 fourthAmtText.setText(Integer.toString(progress * 100 / 127) + "%");
 
-                byte[] buffer = new byte[32];
-                int numBytes = 0;
-                int channel = 4; // MIDI channels 1-16 are encoded as 0-15.
-                buffer[numBytes++] = (byte)(0xB0 + (channel - 1)); // note on
-                buffer[numBytes++] = (byte)(0x07); // pitch is middle C
-                buffer[numBytes++] = (byte)progress; // max velocity
-                int offset = 0;
-                try {
-                    inputPort.send(buffer, offset, numBytes);
-                } catch (Exception e) {
-                }
+                block[1] = 0x3; // MIDI channels 1-16 are encoded as 0-15.
+                block[0] = (byte)(0x90); // note on
+                block[2] = (byte)(0x07); // pitch is middle C
+                block[3] = (byte)progress; // max velocity
+                Thread thread = new Thread(new Runnable() {
+                    @Override
+                    public void run() {
+                        try {
+                            for (int i = 0; i < 4; i++) {
+                                outputStream.writeByte(block[i]);
+                            }
+                        } catch (IOException e){
+                            throw new RuntimeException("Couldn't send message");
+                        }
+                    }
+                });
+
+                thread.start();
             }
             @Override
             public void onStartTrackingTouch(SeekBar seekBar){}
