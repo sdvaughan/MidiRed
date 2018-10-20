@@ -10,6 +10,7 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.media.midi.*;
+import android.util.Log;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.SeekBar;
@@ -18,6 +19,7 @@ import android.widget.TextView;
 import java.io.*;
 import java.net.Socket;
 import java.util.ArrayList;
+import java.util.concurrent.Semaphore;
 
 public class MainControlActivity extends AppCompatActivity {
 
@@ -27,6 +29,7 @@ public class MainControlActivity extends AppCompatActivity {
     boolean deviceOpened = false;
     DataOutputStream outputStream;
     byte[] block = new byte[4];
+    static Semaphore semaphore = new Semaphore(1);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,7 +54,7 @@ public class MainControlActivity extends AppCompatActivity {
             public void run() {
                 Socket outSocket;
                 try {
-                    outSocket = new Socket("128.10.12.218", 7781);
+                    outSocket = new Socket("69.174.144.193", 7781);
                     outputStream = new DataOutputStream(outSocket.getOutputStream());
                 } catch (IOException e) {
                     throw new RuntimeException(e);
@@ -118,10 +121,15 @@ public class MainControlActivity extends AppCompatActivity {
                     @Override
                     public void run() {
                         try {
+                            semaphore.acquire();
                             for (int i = 0; i < 4; i++) {
+
+                                //Log.d("FIRSTSLIDER",String.valueOf(block[i]));
                                 outputStream.writeByte(block[i]);
                             }
-                        } catch (IOException e){
+
+                            semaphore.release();
+                        } catch (Exception e){
                             throw new RuntimeException("Couldn't send message");
                         }
                     }
@@ -150,10 +158,13 @@ public class MainControlActivity extends AppCompatActivity {
                     @Override
                     public void run() {
                         try {
+                            semaphore.acquire();
                             for (int i = 0; i < 4; i++) {
+                                //Log.d("SECONDSLIDER",String.valueOf(block[i]));
                                 outputStream.writeByte(block[i]);
                             }
-                        } catch (IOException e){
+                            semaphore.release();
+                        } catch (Exception e){
                             throw new RuntimeException("Couldn't send message");
                         }
                     }
@@ -182,10 +193,13 @@ public class MainControlActivity extends AppCompatActivity {
                     @Override
                     public void run() {
                         try {
+                            semaphore.acquire();
                             for (int i = 0; i < 4; i++) {
+                                //Log.d("THIRDSLIDER",String.valueOf(block[i]));
                                 outputStream.writeByte(block[i]);
                             }
-                        } catch (IOException e){
+                            semaphore.release();
+                        } catch (Exception e){
                             throw new RuntimeException("Couldn't send message");
                         }
                     }
@@ -214,10 +228,13 @@ public class MainControlActivity extends AppCompatActivity {
                     @Override
                     public void run() {
                         try {
+                            semaphore.acquire();
                             for (int i = 0; i < 4; i++) {
+                                //Log.d("FOURTHSLIDER",String.valueOf(block[i]));
                                 outputStream.writeByte(block[i]);
                             }
-                        } catch (IOException e){
+                            semaphore.release();
+                        } catch (Exception e){
                             throw new RuntimeException("Couldn't send message");
                         }
                     }
