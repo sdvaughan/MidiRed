@@ -1,0 +1,103 @@
+-- Merging decision tree log ---
+manifest
+ADDED from C:\Users\SDV99\AndroidStudioProjects\MidiRed\app\src\main\AndroidManifest.xml:2:1-21:12
+INJECTED from C:\Users\SDV99\AndroidStudioProjects\MidiRed\app\src\main\AndroidManifest.xml:2:1-21:12
+INJECTED from C:\Users\SDV99\AndroidStudioProjects\MidiRed\app\src\main\AndroidManifest.xml:2:1-21:12
+INJECTED from C:\Users\SDV99\AndroidStudioProjects\MidiRed\app\src\main\AndroidManifest.xml:2:1-21:12
+MERGED from [com.android.support:appcompat-v7:27.1.1] C:\Users\SDV99\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.1.aar\81b34939fa300afec669b2eb7b7dfdbc\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support.constraint:constraint-layout:1.1.0] C:\Users\SDV99\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.0.aar\5380a56e6fbabc7331beed7de8b3be33\AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:support-fragment:27.1.1] C:\Users\SDV99\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.1.aar\0f20b72a90557240b991271aac646f0b\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] C:\Users\SDV99\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.1.1.aar\42b4046b9afbfd991108a3c6e174eb4d\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:27.1.1] C:\Users\SDV99\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.1.aar\b7bc0500ff6582d05bd744c31bf9912b\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:27.1.1] C:\Users\SDV99\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.1.1.aar\490ef0d4d416d028a09172db9b5ed4ba\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:27.1.1] C:\Users\SDV99\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-27.1.1.aar\05fa342852c051cf41354621dfd4a343\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:27.1.1] C:\Users\SDV99\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.1.aar\698e7604d0c52be401c595a8137449a2\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\SDV99\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\119568e886db82cc0322f907b207c510\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\SDV99\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\5756ac6b746bfdae8112df4c3577940f\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\SDV99\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\0749b020ed0a97cd5f104b9dea540a28\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.0] C:\Users\SDV99\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\b25b679073814ffe62a670b8f37358fa\AndroidManifest.xml:17:1-22:12
+INJECTED from C:\Users\SDV99\AndroidStudioProjects\MidiRed\app\src\main\AndroidManifest.xml:2:1-21:12
+INJECTED from C:\Users\SDV99\AndroidStudioProjects\MidiRed\app\src\main\AndroidManifest.xml:2:1-21:12
+INJECTED from C:\Users\SDV99\AndroidStudioProjects\MidiRed\app\src\main\AndroidManifest.xml:2:1-21:12
+	package
+		ADDED from C:\Users\SDV99\AndroidStudioProjects\MidiRed\app\src\main\AndroidManifest.xml:3:5-40
+		INJECTED from C:\Users\SDV99\AndroidStudioProjects\MidiRed\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\SDV99\AndroidStudioProjects\MidiRed\app\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from C:\Users\SDV99\AndroidStudioProjects\MidiRed\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\SDV99\AndroidStudioProjects\MidiRed\app\src\main\AndroidManifest.xml:2:1-21:12
+		INJECTED from C:\Users\SDV99\AndroidStudioProjects\MidiRed\app\src\main\AndroidManifest.xml
+	android:versionCode
+		INJECTED from C:\Users\SDV99\AndroidStudioProjects\MidiRed\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\SDV99\AndroidStudioProjects\MidiRed\app\src\main\AndroidManifest.xml:2:1-21:12
+		INJECTED from C:\Users\SDV99\AndroidStudioProjects\MidiRed\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from C:\Users\SDV99\AndroidStudioProjects\MidiRed\app\src\main\AndroidManifest.xml:2:11-69
+application
+ADDED from C:\Users\SDV99\AndroidStudioProjects\MidiRed\app\src\main\AndroidManifest.xml:5:5-19:19
+MERGED from [com.android.support.constraint:constraint-layout:1.1.0] C:\Users\SDV99\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.0.aar\5380a56e6fbabc7331beed7de8b3be33\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.0] C:\Users\SDV99\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.0.aar\5380a56e6fbabc7331beed7de8b3be33\AndroidManifest.xml:9:5-20
+	android:supportsRtl
+		ADDED from C:\Users\SDV99\AndroidStudioProjects\MidiRed\app\src\main\AndroidManifest.xml:10:9-35
+	android:label
+		ADDED from C:\Users\SDV99\AndroidStudioProjects\MidiRed\app\src\main\AndroidManifest.xml:8:9-41
+	android:roundIcon
+		ADDED from C:\Users\SDV99\AndroidStudioProjects\MidiRed\app\src\main\AndroidManifest.xml:9:9-54
+	android:icon
+		ADDED from C:\Users\SDV99\AndroidStudioProjects\MidiRed\app\src\main\AndroidManifest.xml:7:9-43
+	android:allowBackup
+		ADDED from C:\Users\SDV99\AndroidStudioProjects\MidiRed\app\src\main\AndroidManifest.xml:6:9-35
+	android:theme
+		ADDED from C:\Users\SDV99\AndroidStudioProjects\MidiRed\app\src\main\AndroidManifest.xml:11:9-40
+activity#com.example.sdv99.midired.MainControlActivity
+ADDED from C:\Users\SDV99\AndroidStudioProjects\MidiRed\app\src\main\AndroidManifest.xml:12:9-18:20
+	android:name
+		ADDED from C:\Users\SDV99\AndroidStudioProjects\MidiRed\app\src\main\AndroidManifest.xml:12:19-54
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from C:\Users\SDV99\AndroidStudioProjects\MidiRed\app\src\main\AndroidManifest.xml:13:13-17:29
+action#android.intent.action.MAIN
+ADDED from C:\Users\SDV99\AndroidStudioProjects\MidiRed\app\src\main\AndroidManifest.xml:14:17-69
+	android:name
+		ADDED from C:\Users\SDV99\AndroidStudioProjects\MidiRed\app\src\main\AndroidManifest.xml:14:25-66
+category#android.intent.category.LAUNCHER
+ADDED from C:\Users\SDV99\AndroidStudioProjects\MidiRed\app\src\main\AndroidManifest.xml:16:17-77
+	android:name
+		ADDED from C:\Users\SDV99\AndroidStudioProjects\MidiRed\app\src\main\AndroidManifest.xml:16:27-74
+uses-sdk
+INJECTED from C:\Users\SDV99\AndroidStudioProjects\MidiRed\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\SDV99\AndroidStudioProjects\MidiRed\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\SDV99\AndroidStudioProjects\MidiRed\app\src\main\AndroidManifest.xml
+MERGED from [com.android.support:appcompat-v7:27.1.1] C:\Users\SDV99\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.1.aar\81b34939fa300afec669b2eb7b7dfdbc\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:27.1.1] C:\Users\SDV99\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.1.aar\81b34939fa300afec669b2eb7b7dfdbc\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support.constraint:constraint-layout:1.1.0] C:\Users\SDV99\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.0.aar\5380a56e6fbabc7331beed7de8b3be33\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.1.0] C:\Users\SDV99\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.0.aar\5380a56e6fbabc7331beed7de8b3be33\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:support-fragment:27.1.1] C:\Users\SDV99\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.1.aar\0f20b72a90557240b991271aac646f0b\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.1.1] C:\Users\SDV99\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.1.aar\0f20b72a90557240b991271aac646f0b\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] C:\Users\SDV99\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.1.1.aar\42b4046b9afbfd991108a3c6e174eb4d\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] C:\Users\SDV99\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.1.1.aar\42b4046b9afbfd991108a3c6e174eb4d\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.1] C:\Users\SDV99\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.1.aar\b7bc0500ff6582d05bd744c31bf9912b\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.1] C:\Users\SDV99\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.1.aar\b7bc0500ff6582d05bd744c31bf9912b\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.1] C:\Users\SDV99\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.1.1.aar\490ef0d4d416d028a09172db9b5ed4ba\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.1] C:\Users\SDV99\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.1.1.aar\490ef0d4d416d028a09172db9b5ed4ba\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.1.1] C:\Users\SDV99\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-27.1.1.aar\05fa342852c051cf41354621dfd4a343\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.1.1] C:\Users\SDV99\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-27.1.1.aar\05fa342852c051cf41354621dfd4a343\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.1] C:\Users\SDV99\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.1.aar\698e7604d0c52be401c595a8137449a2\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.1] C:\Users\SDV99\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.1.aar\698e7604d0c52be401c595a8137449a2\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\SDV99\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\119568e886db82cc0322f907b207c510\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\SDV99\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\119568e886db82cc0322f907b207c510\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\SDV99\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\5756ac6b746bfdae8112df4c3577940f\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\SDV99\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\5756ac6b746bfdae8112df4c3577940f\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\SDV99\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\0749b020ed0a97cd5f104b9dea540a28\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\SDV99\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\0749b020ed0a97cd5f104b9dea540a28\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] C:\Users\SDV99\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\b25b679073814ffe62a670b8f37358fa\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] C:\Users\SDV99\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\b25b679073814ffe62a670b8f37358fa\AndroidManifest.xml:20:5-44
+INJECTED from C:\Users\SDV99\AndroidStudioProjects\MidiRed\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\SDV99\AndroidStudioProjects\MidiRed\app\src\main\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from C:\Users\SDV99\AndroidStudioProjects\MidiRed\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\SDV99\AndroidStudioProjects\MidiRed\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\SDV99\AndroidStudioProjects\MidiRed\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from C:\Users\SDV99\AndroidStudioProjects\MidiRed\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\SDV99\AndroidStudioProjects\MidiRed\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\SDV99\AndroidStudioProjects\MidiRed\app\src\main\AndroidManifest.xml
