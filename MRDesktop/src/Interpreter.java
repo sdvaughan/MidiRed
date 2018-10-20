@@ -5,6 +5,7 @@ import javax.sound.midi.*;
 
 public class Interpreter {
 
+
     public static void main(String[] args) throws Exception {
         Socket inSocket;
         if (args.length != 2) {
@@ -29,16 +30,18 @@ public class Interpreter {
             if (infos[i].getName().equals("LoopBe Internal MIDI")){
                 if (!dev1Found){
                     device1 = MidiSystem.getMidiDevice(infos[i]);
+                    device1.open();
                     dev1Found = true;
                 } else {
                     device2 = MidiSystem.getMidiDevice(infos[i]);
+                    device2.open();
                 }
             }
         }
 
         Receiver receiver;
 
-        if (device1.getMaxReceivers() == 0) {
+        if (device1.getMaxReceivers() == -1) {
             receiver = device1.getReceiver();
         } else {
             receiver = device2.getReceiver();
@@ -46,14 +49,20 @@ public class Interpreter {
 
         while (true){
             for(int i = 0; i<4; i++){
-                block[i] = inputStream.readByte();
+                try {
+                    block[i] = inputStream.readByte();
+                } catch (Exception e){
+
+                }
             }//end for
+            if (!(block[0] == 0 && block[1] == 0 && block[2] == 0 && block[3] == 0) ) {
+                ShortMessage myMsg = new ShortMessage();
+                myMsg.setMessage(block[0] - 0xffffff00, block[1], block[2], block[3]);
+                long timeStamp = -1;
+                int channel = myMsg.getChannel();
+                receiver.send(myMsg,-1);
 
-            ShortMessage myMsg = new ShortMessage();
-            myMsg.setMessage(block[0], block[1], block[2], block[3]);
-            long timeStamp = -1;
-            receiver.send(myMsg, timeStamp);
-
+            }
         }//end while
 
     }//end main
