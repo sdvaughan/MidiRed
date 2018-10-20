@@ -4,7 +4,6 @@ import java.net.*;
 
 public class Interpreter {
 
-
     public static void main(String[] args) throws Exception {
         Socket inSocket;
         try {
@@ -15,8 +14,15 @@ public class Interpreter {
 
         DataInputStream inputStream = new DataInputStream(inSocket.getInputStream());
 
+        byte[] block = new byte[4];
+
         while (true){
-            System.out.println(inputStream.read());
-        }
-    }
-}
+            for(int i = 0; i<4; i++){
+                block[i] = inputStream.readByte();
+            }//end for
+
+        }//end while
+
+    }//end main
+
+}//end interpreter
