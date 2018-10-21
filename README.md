@@ -40,4 +40,8 @@ _Usage:_
 
 3) *MRAPP SETUP*
 	
-	Change preset IP in source code of MRApp project to desired host, then build and run.
+	Change preset IP in source code of MRApp project to desired host, then build and run
+
+4) *LOOPBE SETUP*
+
+	Go to https://www.nerds.de/en/download.html and download & install LoopBe1.
