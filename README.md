@@ -16,6 +16,8 @@ __/\\\\____________/\\\\_______________/\\\_____________________/\\\\\\\\\______
 
 *A Boilermake VI project*
 
+Executable binaries can be found in the `bin` folder.
+
 Description:
 Android app (MRApp) communicates over IP to a desktop server (MRServer), which relays MIDI inputs to another desktop client (MRDesktop). Desktop client then relays MIDI through LoopBe to a Digital Audio Workstation (DAW).
 
