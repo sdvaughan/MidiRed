@@ -34,7 +34,7 @@ _Usage:_
 
 2) *MRDESKTOP SETUP*
 	
-	Desktop client will be run through command-line ( MRDesktop <host> ), where host is the hostname of the server.
+	Desktop client will be run through command-line `MRDesktop <host>`, where host is the hostname of the server.
 
 3) *MRAPP SETUP*
 	
