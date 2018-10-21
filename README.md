@@ -16,7 +16,7 @@ __/\\\\____________/\\\\_______________/\\\_____________________/\\\\\\\\\______
 
 *A Boilermake VI project*
 
-Executable binaries can be found in the `bin` folder (*All binaries are x86*).
+Executables will be found in the `bin` folder (*Server binary is x86, client is .jar file, app is .apk file*).
 
 Description:
 Android app (MRApp) communicates over IP to a desktop server (MRServer), which relays MIDI inputs to another desktop client (MRDesktop). Desktop client then relays MIDI through LoopBe to a Digital Audio Workstation (DAW).
