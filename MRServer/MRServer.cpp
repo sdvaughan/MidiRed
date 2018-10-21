@@ -82,7 +82,9 @@ MRServer::open_server_socket(int port) {
 void
 MRServer::runServer(int port)
 {
+	
 	int masterSocket = open_server_socket(port);
+	int masterSocket2 = open_server_socket(port+1);
 
 	//initialize();
 	
@@ -100,8 +102,20 @@ MRServer::runServer(int port)
 			exit( -1 );
 		}
 		
+		struct sockaddr_in clientIPAddress2;
+		int alen2 = sizeof( clientIPAddress2 );
+		int slaveSocket2 = accept( masterSocket2,
+					  (struct sockaddr *)&clientIPAddress2,
+					  (socklen_t*)&alen2);
+		
+		if ( slaveSocket2 < 0 ) {
+			perror( "accept" );
+			exit( -1 );
+		}
+		
+
 		// Process request.
-		processRequest( slaveSocket );		
+		processRequest( slaveSocket, slaveSocket2 );		
 	}
 }
 
@@ -125,7 +139,7 @@ main( int argc, char ** argv )
 }
 
 void
-MRServer::processRequest( int fd )
+MRServer::processRequest( int fd, int fd2 )
 {
 	// Buffer used to store the comand received from the client
 	//const int MaxCommandLine = 1024;
@@ -156,7 +170,7 @@ MRServer::processRequest( int fd )
 		index++;
 
 		if (index == 4) {
-			write(fd, buffer, sizeof(unsigned char) * 4);
+			write(fd2, buffer, sizeof(unsigned char) * 4);
 		}
 		
 	}
