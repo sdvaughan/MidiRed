@@ -16,7 +16,7 @@ __/\\\\____________/\\\\_______________/\\\_____________________/\\\\\\\\\______
 
 *A Boilermake VI project*
 
-Executables will be found in the `bin` folder (*Server binary is x86, client is .jar file, app is .apk file*).
+Most recent server executable will be found in the `bin` folder (*Server binary is x86*).
 
 Description:
 Android app (MRApp) communicates over IP to a desktop server (MRServer), which relays MIDI inputs to another desktop client (MRDesktop). Desktop client then relays MIDI through LoopBe to a Digital Audio Workstation (DAW).
@@ -32,12 +32,12 @@ _Usage:_
 
 1) *MRSERVER SETUP*
 
-	Server must be run on a machine with ports 7781 and 7782 open.
+	Server must be run on a machine with selected port and its subsequent open through command `MRServer <port>`.
 
 2) *MRDESKTOP SETUP*
 	
-	Desktop client will be run through command-line `MRDesktop <host>`, where host is the hostname of the server.
+	Desktop client will be run through command `MRDesktop <host>`, where host is the hostname of the server. (Compilation through IntelliJ currently necessary)
 
 3) *MRAPP SETUP*
 	
-	Download APK and run. App will prompt for the hostname of the server.
+	Change preset IP in source code of MRApp project to desired host, then build and run.
