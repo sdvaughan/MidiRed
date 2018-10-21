@@ -26,13 +26,16 @@ MRServer - Program intended to relay and parse information from the MRApp code t
 MRDesktop - Recieves input data from MRServer and outputs it into a LoopBe virtual MIDI device.
 
 
-Usage:
+_Usage:_
 
-1) MRSERVER SETUP
+1) *MRSERVER SETUP*
+
 	Server must be run on a machine with ports 7781 and 7782 open.
 
-2) MRDESKTOP SETUP
+2) *MRDESKTOP SETUP*
+	
 	Desktop client will be run through command-line ( MRDesktop <host> ), where host is the hostname of the server.
 
-3) MRAPP SETUP
+3) *MRAPP SETUP*
+	
 	Download APK and run. App will prompt for the hostname of the server.
