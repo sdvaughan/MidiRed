@@ -21,11 +21,11 @@ Most recent server executable will be found in the `bin` folder (*Server binary 
 Description:
 Android app (MRApp) communicates over IP to a desktop server (MRServer), which relays MIDI inputs to another desktop client (MRDesktop). Desktop client then relays MIDI through LoopBe to a Digital Audio Workstation (DAW).
 
-MRApp - Contains sliders and knobs to change pitch, tone, etc acting as a normal MIDI controller.
+MRApp - Contains sliders and knobs to change pitch, tone, etc., acting as a normal MIDI controller.
 
-MRServer - Program intended to relay and parse information from the MRApp code to the MRServer.
+MRServer - Relays and parses information sent from the MRApp on a remote device.
 
-MRDesktop - Recieves input data from MRServer and outputs it into a LoopBe virtual MIDI device.
+MRDesktop - Receives input data from MRServer and outputs it into a LoopBe virtual MIDI device.
 
 
 _Usage:_
